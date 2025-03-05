@@ -15,3 +15,20 @@ TFDFにおける特徴量の使用方法定義するためのクラス
 引数と戻り値  
 - 引数：初期化時に引数は取らない 特徴量の設定はオブジェクトのメソッドを通じて行う
 - 戻り値：FeatureUsageクラスの新しいインスタンスを返す
+
+# tfdf.keras.GradientBoostedTreesModel()
+勾配ブースティング決定木を初期化する関数  
+
+引数  
+- objective：モデルの目的関数を指定
+- features：モデルが使用する特徴量を指定 tfdf.keras.FeatureUsageオブジェクトとして渡す
+- exclude_non_specified_features：fearureで指定されていない特徴量をモデルが使用するか決める
+- hyperparameters：決定木の成長戦略を指定
+- num_tree：モデルが生成する木の数
+- max_depth：最大深度
+- random_seed：乱数生成のシード値を指定 モデルの再現性を確保するために使用
+- verbose：ログ出力設定
+- preprocessing：モデルに入力される特徴量に適応する前処理
+
+戻り値  
+インスタンスオブジェクト
